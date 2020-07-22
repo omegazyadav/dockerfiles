@@ -1,7 +1,7 @@
 # Run the netstat command for network related information. 
 
 # docker run --rm --name netstat -it \
-# --pid host \
+# --net=host \
 # omegazyadav/netstat
 
 FROM alpine:latest
