@@ -27,7 +27,6 @@ jobs:
         - name: Push netstat
           run: docker push ${{ secrets.DOCKERHUB_USER }}/netstat:${{ steps.vars.outputs.tag }}
 
-jobs:
   github-registry:
     runs-on: ubuntu-latest
     steps:
