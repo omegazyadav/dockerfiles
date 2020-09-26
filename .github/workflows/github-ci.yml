@@ -39,6 +39,6 @@ jobs:
         - name: Build htop
           run: docker build $PWD/htop --file htop/Dockerfile --tag htop
         - name: Tag htop
-          run: docker tag htop:latest docker.pkg.github.com/omegazyadav/dockerfiles/htop:${{ steps.vars.outputs.tag }}
+          run: docker tag htop docker.pkg.github.com/omegazyadav/dockerfiles/htop:${{ steps.vars.outputs.tag }}
         - name: Push htop
-          run: docker push docker.pkg.github.com/omegazyadav/dockerfles/htop:${{ steps.vars.outputs.tag }}
+          run: docker push docker.pkg.github.com/omegazyadav/dockerfiles/htop:${{ steps.vars.outputs.tag }}
