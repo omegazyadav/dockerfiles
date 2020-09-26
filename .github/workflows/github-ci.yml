@@ -42,3 +42,9 @@ jobs:
           run: docker tag htop docker.pkg.github.com/omegazyadav/dockerfiles/htop:${{ steps.vars.outputs.tag }}
         - name: Push htop
           run: docker push docker.pkg.github.com/omegazyadav/dockerfiles/htop:${{ steps.vars.outputs.tag }}
+        - name: Build netstat
+          run: docker build $PWD/netstat --file netstat/Dockerfile --tag netstat
+        - name: Tag netstat
+          run: docker tag netstat docker.pkg.github.com/omegazyadav/dockerfiles/netstat:${{ steps.vars.outputs.tag }}
+        - name: Push netstat
+          run: docker push docker.pkg.github.com/omegazyadav/dockerfiles/netstat:${{ steps.vars.outputs.tag }}
